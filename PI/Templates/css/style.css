@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #282c34;
+    padding: 20px 20px;
+    border: 2px solid #61dafb;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.logo a:hover {
+    transform: scale(1.1);
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(97, 218, 251, 0.1);
+    border: 2px solid #61dafb;
+}
+
+/* Estilização do campo select */
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Alteração da borda do select quando ele está em foco */
+select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Estilização do botão de submit */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do texto do link */
+.link a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    height: 80vh;
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero h1 span {
+    color: #61dafb;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    border: 2px solid #61dafb;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+}
+
+.btn -secondary {
+    background-color: #282c34;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 2px solid #61dafb;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #61dafb;
+    color: #282c34;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 2px solid #61dafb;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(97, 218, 251, 0.1);
+    border: 2px solid #61dafb;
+}
+
+.about-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    line-height: 1.8;
+}
+
+.about-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #007bff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.intro {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.features-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #61dafb;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    background-color: #55c5e0;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+}
+
+.cta {
+    background-color: #61dafb;
+    color: #282c34;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    background-color: #282c34;
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #282c34;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .features-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .about-container h2 {
+        font-size: 2rem;
+    }
+
+    .about-container .intro {
+        font-size: 1rem;
+    }
+
+    .about-container .highlight {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #282c34;
+        position: absolute;
+        top: 60px;
+        left:  0;
+        right: 0;
+        padding: 10px 0;
+        z-index: 1;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
+
+.contact-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    line-height: 1.8;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #007bff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background-color: #61dafb;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+    background-color: #55c5e0;
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    font-size: 1rem;
+}
+
+/* Estilos para o formulário de login e cadastro */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-container input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-container .link {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.form-container .link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-container .link a:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #282c34;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Adiciona transição */
+    transform: translateY(-10px); /* Move o dropdown para cima inicialmente */
+    margin-top: 10px; /* Adiciona espaço acima do dropdown */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Move o dropdown para sua posição original */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(97, 218, 251, 0.1);
+}
