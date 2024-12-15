@@ -119,8 +119,7 @@ $queries = [
         status ENUM('pendente', 'aceito', 'negado', 'negociacao') DEFAULT 'pendente',
         nova_data DATETIME DEFAULT NULL,
         nova_quantia DECIMAL(10, 2) DEFAULT NULL,
-        usuario_id_destinatario INT,  // Nova coluna
-        usuario_id_solicitante INT,    // Nova coluna
+
         FOREIGN KEY (banda_id) REFERENCES bandas(id),
         FOREIGN KEY (espaco_id) REFERENCES espacos(id)
     )"

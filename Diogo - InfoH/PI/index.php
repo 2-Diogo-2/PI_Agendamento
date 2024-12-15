@@ -48,21 +48,19 @@ $db->close();
 <main>
     <!-- Hero Section -->
     <section class="hero">
-            <h1>Bem-vindo à Plataforma de Agendamento de Shows</h1>
-            <p>Conectando bandas locais a espaços de apresentação em Minas Gerais.</p>
-            <a href="cadastro.php" class="btn-primary">Cadastrar-se</a>
-        </div>
+        <h1>Bem-vindo à Plataforma de Agendamento de Shows</h1>
+        <p>Conectando bandas locais a espaços de apresentação em Minas Gerais.</p>
+        <a href="cadastro.php" class="btn-primary">Cadastrar-se</a>
     </section>
 </main>
 
-
-  <!-- Carrossel de Bandas -->
-  <section class="carousel-section">
+<!-- Carrossel de Bandas -->
+<section class="carousel-section">
     <h2>Bandas</h2>
     <div class="carousel">
         <?php foreach ($bandas as $banda): ?>
             <div class="carousel-item">
-                <img src="<?= BASE_URL . htmlspecialchars($banda['foto_url']) ?>" alt="<?= htmlspecialchars($banda['nome_banda']) ?>"> 
+                <img src="<?= BASE_URL . 'php/uploads/bandas/' . htmlspecialchars($banda['foto_url']) ?>" alt="<?= htmlspecialchars($banda['nome_banda']) ?>"> 
                 <h3><?= htmlspecialchars($banda['nome_banda']) ?></h3>
                 <p><?= htmlspecialchars($banda['genero']) ?></p>
                 <a href="detalhes.php?id=<?= $banda['id'] ?>&tipo=banda" class="btn-secondary">Ver Detalhes</a>
@@ -71,13 +69,13 @@ $db->close();
     </div>
 </section>
 
-  <!-- Carrossel de Espaços de Apresentação -->
+<!-- Carrossel de Espaços de Apresentação -->
 <section class="carousel-section">
     <h2>Espaços de Apresentação</h2>
     <div class="carousel">
         <?php foreach ($espacos as $espaco): ?>
             <div class="carousel-item">
-                <img src="<?= BASE_URL . htmlspecialchars($fotos_espaco['foto_url']) ?>" alt="<?= htmlspecialchars($espaco['nome_espaco']) ?>">
+                <img src="<?= BASE_URL . 'php/uploads/espacos/' . htmlspecialchars($espaco['foto_url']) ?>" alt="<?= htmlspecialchars($espaco['nome_espaco']) ?>">
                 <h3><?= htmlspecialchars($espaco['nome_espaco']) ?></h3>
                 <p><?= htmlspecialchars($espaco['cidade']) ?></p>
                 <a href="detalhes.php?id=<?= $espaco['id'] ?>&tipo=espaco" class="btn-secondary">Ver Detalhes</a>
@@ -86,5 +84,5 @@ $db->close();
     </div>
 </section>
 
-  
+
 <?php include 'php/includes/footer.php'; ?>
